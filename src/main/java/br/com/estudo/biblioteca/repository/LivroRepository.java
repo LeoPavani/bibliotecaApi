@@ -7,6 +7,6 @@ import br.com.estudo.biblioteca.modelo.Livro;
 public interface LivroRepository extends JpaRepository<Livro, Long> {
 	
 	
-	Livro findLivroByNome(String nomeLivro);
+	
 	
 }

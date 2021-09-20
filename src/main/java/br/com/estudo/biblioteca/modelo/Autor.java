@@ -1,7 +1,5 @@
 package br.com.estudo.biblioteca.modelo;
 
-import java.util.List;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -13,13 +11,12 @@ public class Autor {
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String nome;
-//	private List<Livro> livros;
 	
-	public Autor(String nome, List<Livro> livros) {
+	public Autor() {}
+	
+	public Autor(String nome) {
 		this.nome = nome;
-//		this.livros = livros;
 	}
-	
 	public Long getId() {
 		return id;
 	}
@@ -32,12 +29,6 @@ public class Autor {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-//	public List<Livro> getLivros() {
-//		return livros;
-//	}
-//	public void setLivros(List<Livro> livros) {
-//		this.livros = livros;
-//	}
 	
 	
 }

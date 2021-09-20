@@ -15,11 +15,10 @@ public class AtualizacaoLivroForm {
 		this.editora = editora;
 	}
 	
-	public Livro atualizar(String nomeLivro, LivroRepository livroRepository) {
-		Livro livro = livroRepository.findLivroByNome(nomeLivro);
+	public Livro atualizar(Long id, LivroRepository livroRepository) {
+		Livro livro = livroRepository.getById(id);
 		livro.setEditora(this.editora);
 		return livro;
-		
 	}
 	
 }
